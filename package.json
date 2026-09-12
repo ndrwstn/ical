@@ -1,0 +1,11 @@
+{
+  "name": "ical",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:ufc": "node scripts/generate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
