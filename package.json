@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "generate:ufc": "node scripts/generate.mjs"
+    "generate:ufc": "node scripts/generate.mjs",
+    "generate:icc-test": "node scripts/generate-icc-test.mjs"
   },
   "engines": {
     "node": ">=20"
