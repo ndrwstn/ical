@@ -32,18 +32,13 @@ jobs:
         run: npm run generate:icc-test-cricket
         env:
           CRICKETDATA_API_KEY: ${{ secrets.CRICKETDATA_API_KEY }}
-      - name: Report CricketData usage
-        if: always()
+      - name: Save latest ICC Test Cricket feed
         run: |
-          node -e 'const fs=require("fs"); const p="state/cricketdata-usage.json"; if (fs.existsSync(p)) { const u=JSON.parse(fs.readFileSync(p)); console.log(`CricketData API calls this run: ${u.runCalls}; aggregate today: ${u.total}/90.`); } else { console.log("CricketData API calls this run: 0; aggregate today: 0/90."); }'
-      - name: Save ICC Test Cricket feed and usage
-        if: always()
-        run: |
-          if test -z "$(git status --porcelain -- public/icc-test-cricket.ics state/cricketdata-usage.json)"; then exit 0; fi
+          if test -z "$(git status --porcelain -- public/icc-test-cricket.ics)"; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- public/icc-test-cricket.ics state/cricketdata-usage.json
-          git commit -m "Update ICC Test Cricket calendar and API usage"
+          git add public/icc-test-cricket.ics
+          git commit -m "Update ICC Test Cricket calendar"
           git push
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
