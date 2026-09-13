@@ -34,7 +34,7 @@ jobs:
           CRICKETDATA_API_KEY: ${{ secrets.CRICKETDATA_API_KEY }}
       - name: Save latest ICC Test feed
         run: |
-          if git diff --quiet -- public/icc-test.ics; then exit 0; fi
+          if test -z "$(git status --porcelain -- public/icc-test.ics)"; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/icc-test.ics
