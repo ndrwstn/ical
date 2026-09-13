@@ -4,6 +4,6 @@ UFC calendar:
 
 https://ndrwstn.github.io/ical/ufc.ics
 
-ICC Test calendar:
+ICC Test Cricket calendar:
 
-https://ndrwstn.github.io/ical/icc-test.ics
+https://ndrwstn.github.io/ical/icc-test-cricket.ics
