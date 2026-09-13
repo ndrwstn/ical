@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  generate-and-deploy:
+  generate-and-deploy-ufc:
     runs-on: ubuntu-latest
     steps:
       - name: Check out master
