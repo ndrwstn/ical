@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "generate:ufc": "node scripts/generate.mjs",
-    "generate:icc-test": "node scripts/generate-icc-test.mjs"
+    "generate:icc-test-cricket": "node scripts/generate-icc-test-cricket.mjs"
   },
   "engines": {
     "node": ">=20"
