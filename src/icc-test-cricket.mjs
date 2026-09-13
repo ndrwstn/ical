@@ -187,6 +187,7 @@ async function fetchSeriesFixtures(apiKey) {
       try {
         return matchesFromSeriesInfo(await apiFetch("series_info", apiKey, { id }));
       } catch (error) {
+        if (error.code === "API_CALL_LIMIT") throw error;
         console.warn(`Could not read series ${id}: ${error.message}`);
         return [];
       }
@@ -194,6 +195,7 @@ async function fetchSeriesFixtures(apiKey) {
     console.log(`CricketData series discovery: ${series.length} series scanned, ${candidates.length} relevant series checked.`);
     return details.flat();
   } catch (error) {
+    if (error.code === "API_CALL_LIMIT") throw error;
     console.warn(`CricketData series discovery unavailable: ${error.message}`);
     return [];
   }
