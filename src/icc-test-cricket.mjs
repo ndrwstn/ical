@@ -1,5 +1,3 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-
 const API_ROOT = "https://api.cricapi.com/v1";
 const PILOT_TEAMS = new Set(["Australia", "England", "India", "New Zealand", "South Africa"]);
 const INTERNATIONAL_TEAMS = new Set([
@@ -83,56 +81,19 @@ function includeMatch(record) {
 }
 
 const API_CALL_LIMIT = 90;
-let usagePath = "state/cricketdata-usage.json";
-let usageState = null;
-let usageChain = Promise.resolve();
-
-function todayUtc() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-async function persistUsage() {
-  await mkdir(usagePath.split("/").slice(0, -1).join("/") || ".", { recursive: true });
-  await writeFile(usagePath, JSON.stringify(usageState, null, 2) + "\n", "utf8");
-}
-
-async function initializeUsage(path = usagePath) {
-  usagePath = path;
-  try {
-    usageState = JSON.parse(await readFile(usagePath, "utf8"));
-  } catch {
-    usageState = null;
-  }
-  if (!usageState || usageState.date !== todayUtc()) {
-    usageState = { date: todayUtc(), total: 0, runCalls: 0 };
-  } else {
-    usageState.total = Number(usageState.total) || 0;
-    usageState.runCalls = 0;
-  }
-  await persistUsage();
-}
-
-function usageError() {
-  const error = new Error(`CricketData daily safety limit reached (${API_CALL_LIMIT} calls).`);
-  error.code = "API_CALL_LIMIT";
-  return error;
-}
+let runCalls = 0;
 
 async function reserveApiCall() {
-  usageChain = usageChain.then(async () => {
-    if (!usageState) await initializeUsage();
-    if (usageState.total >= API_CALL_LIMIT) throw usageError();
-    usageState.total += 1;
-    usageState.runCalls += 1;
-    await persistUsage();
-  });
-  return usageChain;
+  if (runCalls >= API_CALL_LIMIT) {
+    const error = new Error(`CricketData call limit reached for this run (${API_CALL_LIMIT} calls).`);
+    error.code = "API_CALL_LIMIT";
+    throw error;
+  }
+  runCalls += 1;
 }
 
 export function getCricketDataUsage() {
-  return usageState
-    ? { date: usageState.date, runCalls: usageState.runCalls, total: usageState.total, limit: API_CALL_LIMIT }
-    : { date: todayUtc(), runCalls: 0, total: 0, limit: API_CALL_LIMIT };
+  return { runCalls, limit: API_CALL_LIMIT };
 }
 
 async function apiFetch(path, apiKey, params = {}) {
@@ -255,8 +216,7 @@ function buildCalendar(matches) {
   ].join("\r\n");
 }
 
-export async function buildIccTestCricketCalendar(apiKey, options = {}) {
-  await initializeUsage(options.usagePath || "state/cricketdata-usage.json");
+export async function buildIccTestCricketCalendar(apiKey) {
   if (!apiKey) throw new Error("CRICKETDATA_API_KEY is not configured.");
   const [nearTerm, seriesFixtures] = await Promise.all([
     fetchPages("matches", apiKey, 4),
