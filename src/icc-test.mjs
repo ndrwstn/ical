@@ -1,5 +1,4 @@
 const API_URL = "https://api.cricapi.com/v1/matches";
-const CALENDAR_NAME = "icc-test";
 const PILOT_TEAMS = new Set(["Australia", "England", "India", "New Zealand", "South Africa"]);
 const INTERNATIONAL_TEAMS = new Set([
   "Afghanistan", "Australia", "Bangladesh", "England", "India", "Ireland",
@@ -23,7 +22,7 @@ function cleanTeam(value = "") {
 }
 
 function isWomenMatch(match, teams) {
-  return /women|\bW\b/i.test(String(match.name || match.series || "")) ||
+  return /women|\bW\b/i.test(String(match.name || match.series?.name || match.series || "")) ||
     teams.some((team) => /\s+(Women|W)$/i.test(team));
 }
 
@@ -62,7 +61,7 @@ function buildCalendar(matches) {
     const women = isWomenMatch(match, teams);
     const days = women ? 4 : 5;
     const test = testLabel(match);
-    const series = String(match.series || "").trim();
+    const series = String(match.series?.name || match.seriesName || match.series || "").trim();
     for (let day = 1; day <= days; day += 1) {
       const dayStart = new Date(start.getTime() + (day - 1) * 24 * 60 * 60 * 1000);
       const dayEnd = new Date(dayStart.getTime() + 7 * 60 * 60 * 1000);
