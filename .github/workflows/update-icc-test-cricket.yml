@@ -24,6 +24,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Preserve published UFC feed
+        run: |
+          mkdir -p public
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/ufc.ics -o public/ufc.ics
       - name: Generate ICC Test Cricket feed
         run: npm run generate:icc-test-cricket
         env:
