@@ -262,12 +262,36 @@ export async function diagnoseIccTestCricket(apiKey) {
     ...target,
     found: pilotSeries.some((item) => target.teams.every((team) => hasTeamName(item.name, team))),
   }));
+  const target = series.find((item) => {
+    const name = String(item?.name || item?.seriesName || "");
+    return Number(item?.test || item?.tests || 0) > 0 &&
+      hasTeamName(name, "Australia") &&
+      hasTeamName(name, "New Zealand") &&
+      !/women|\bW\b/i.test(name);
+  });
+  if (!target?.id) {
+    throw new Error("Could not locate the Australia–New Zealand men’s Test series for fixture-shape inspection.");
+  }
+  const seriesInfo = await apiFetch("series_info", apiKey, { id: target.id });
+  const data = seriesInfo?.data || {};
+  const fixtureArrays = Object.fromEntries(
+    Object.entries(data)
+      .filter(([, value]) => Array.isArray(value))
+      .map(([key, value]) => [key, value.length])
+  );
+  const parsedFixtures = matchesFromSeriesInfo(seriesInfo);
+  const sample = parsedFixtures[0] || null;
   const output = {
     callsMade: getCricketDataUsage().runCalls,
     seriesRecordsRead: series.length,
     seriesFieldsSeen: [...new Set(metadata.flatMap((item) => item.fields))].sort(),
     pilotSeries: pilotSeries.slice(0, 30),
     expected,
+    inspectedSeries: seriesMetadata(target),
+    seriesInfoFields: Object.keys(data).sort(),
+    fixtureArrays,
+    parsedFixtureCount: parsedFixtures.length,
+    parsedFixtureFields: sample ? Object.keys(matchRecord(sample)).sort() : [],
   };
   console.log("ICC Test Cricket diagnostic:");
   console.log(JSON.stringify(output, null, 2));
