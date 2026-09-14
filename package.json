@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "generate:ufc": "node scripts/generate.mjs",
-    "generate:icc-test-cricket": "node scripts/generate-icc-test-cricket.mjs"
+    "generate:icc-test-cricket": "node scripts/generate-icc-test-cricket.mjs",
+    "diagnose:icc-test-cricket": "node scripts/diagnose-icc-test-cricket.mjs"
   },
   "engines": {
     "node": ">=20"
