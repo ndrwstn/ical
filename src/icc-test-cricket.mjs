@@ -81,11 +81,17 @@ function includeMatch(record) {
 }
 
 const API_CALL_LIMIT = 90;
+let runCallLimit = API_CALL_LIMIT;
 let runCalls = 0;
 
+function startRun(maxCalls = API_CALL_LIMIT) {
+  runCalls = 0;
+  runCallLimit = Math.min(API_CALL_LIMIT, Math.max(1, Number(maxCalls) || API_CALL_LIMIT));
+}
+
 async function reserveApiCall() {
-  if (runCalls >= API_CALL_LIMIT) {
-    const error = new Error(`CricketData call limit reached for this run (${API_CALL_LIMIT} calls).`);
+  if (runCalls >= runCallLimit) {
+    const error = new Error(`CricketData call limit reached for this run (${runCallLimit} calls).`);
     error.code = "API_CALL_LIMIT";
     throw error;
   }
@@ -93,7 +99,7 @@ async function reserveApiCall() {
 }
 
 export function getCricketDataUsage() {
-  return { runCalls, limit: API_CALL_LIMIT };
+  return { runCalls, limit: runCallLimit };
 }
 
 async function apiFetch(path, apiKey, params = {}) {
@@ -216,7 +222,63 @@ function buildCalendar(matches) {
   ].join("\r\n");
 }
 
+function seriesMetadata(series) {
+  return {
+    id: series?.id || series?.seriesId || null,
+    name: String(series?.name || series?.seriesName || ""),
+    startDate: series?.startDate || series?.startdate || series?.start || null,
+    endDate: series?.endDate || series?.enddate || series?.end || null,
+    test: series?.test ?? series?.tests ?? null,
+    fields: Object.keys(series || {}).sort(),
+  };
+}
+
+function hasTeamName(name, team) {
+  const alternatives = {
+    Australia: ["australia", "aus"],
+    England: ["england", "eng"],
+    "New Zealand": ["new zealand", "nz"],
+    "South Africa": ["south africa", "sa"],
+  };
+  const text = name.toLowerCase();
+  return (alternatives[team] || [team.toLowerCase()]).some((value) =>
+    new RegExp(`(^|[^a-z])${value.replace(/ /g, "\\s+")}([^a-z]|$)`, "i").test(text)
+  );
+}
+
+export async function diagnoseIccTestCricket(apiKey) {
+  if (!apiKey) throw new Error("CRICKETDATA_API_KEY is not configured.");
+  startRun(10);
+  const series = await fetchPages("series", apiKey, 10);
+  const metadata = series.map(seriesMetadata);
+  const pilotSeries = metadata.filter((item) =>
+    [...PILOT_TEAMS].some((team) => hasTeamName(item.name, team))
+  );
+  const expected = [
+    { fixture: "South Africa v Australia Tests 2026", teams: ["South Africa", "Australia"] },
+    { fixture: "Australia v New Zealand Tests 2026-27", teams: ["Australia", "New Zealand"] },
+    { fixture: "England v Australia Ashes 2027", teams: ["England", "Australia"] },
+  ].map((target) => ({
+    ...target,
+    found: pilotSeries.some((item) => target.teams.every((team) => hasTeamName(item.name, team))),
+  }));
+  const output = {
+    callsMade: getCricketDataUsage().runCalls,
+    seriesRecordsRead: series.length,
+    seriesFieldsSeen: [...new Set(metadata.flatMap((item) => item.fields))].sort(),
+    pilotSeries: pilotSeries.slice(0, 30),
+    expected,
+  };
+  console.log("ICC Test Cricket diagnostic:");
+  console.log(JSON.stringify(output, null, 2));
+  if (expected.every((item) => !item.found)) {
+    throw new Error("None of the known future pilot Test series appeared in the inspected CricketData series pages.");
+  }
+  return output;
+}
+
 export async function buildIccTestCricketCalendar(apiKey) {
+  startRun();
   if (!apiKey) throw new Error("CRICKETDATA_API_KEY is not configured.");
   const [nearTerm, seriesFixtures] = await Promise.all([
     fetchPages("matches", apiKey, 4),
