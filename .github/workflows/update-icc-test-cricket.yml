@@ -1,19 +1,13 @@
-name: Update ICC Test Cricket calendar
+name: Diagnose ICC Test Cricket source
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  generate-and-deploy-icc-test-cricket:
+  diagnose-icc-test-cricket:
     runs-on: ubuntu-latest
     steps:
       - name: Check out master
@@ -24,25 +18,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Preserve published UFC feed
-        run: |
-          mkdir -p public
-          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/ufc.ics -o public/ufc.ics
-      - name: Generate ICC Test Cricket feed
-        run: npm run generate:icc-test-cricket
+      - name: Inspect CricketData series catalogue
+        run: npm run diagnose:icc-test-cricket
         env:
           CRICKETDATA_API_KEY: ${{ secrets.CRICKETDATA_API_KEY }}
-      - name: Save latest ICC Test Cricket feed
-        run: |
-          if test -z "$(git status --porcelain -- public/icc-test-cricket.ics)"; then exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/icc-test-cricket.ics
-          git commit -m "Update ICC Test Cricket calendar"
-          git push
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
