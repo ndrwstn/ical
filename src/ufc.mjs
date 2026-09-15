@@ -10,17 +10,19 @@ function walk(value, events) {
   if (!value || typeof value !== "object") return;
   const date = value.startDate || value.start_date || value.eventDate || value.event_date;
   const name = value.name || value.title || value.eventName || value.event_name;
-  if (typeof date === "string" && typeof name === "string") events.push({ date, name, url: value.url || value.eventUrl || UFC_EVENTS_URL });
+  const url = value.url || value.eventUrl || "";
+  if (typeof date === "string" && typeof name === "string" && (/^UFC\\b/i.test(name) || /\\/event\\/ufc-/i.test(url))) events.push({ date, name, url: url || UFC_EVENTS_URL });
   Object.values(value).forEach((item) => walk(item, events));
 }
 function parseEvents(source) {
   const raw = [];
-  // Do not walk generic JSON-LD: UFC's page also embeds unrelated third-party
-  // events there.  Only accept UFC's own event-card markup and UFC event URLs.
+  // JSON-LD includes non-UFC promotions too; walk() accepts only UFC-named
+  // objects or official /event/ufc- URLs.
+  for (const match of source.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) { try { walk(JSON.parse(match[1]), raw); } catch {} }
   for (const match of source.matchAll(/<h3[^>]*c-card-event--result__headline[^>]*>\s*<a href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>\s*<\/h3>[\s\S]{0,1800}?data-card-event-title=["'][^"']*["']/gi)) {
     const title = stripHtml(match[2]);
-    if (!/^UFC\b/i.test(title)) continue;
     const url = `https://www.ufc.com${match[1]}`;
+    if (!/\/event\/ufc-/i.test(url)) continue;
     const cards = [
       ["data-early-card-timestamp", "Early Prelims", 2],
       ["data-prelims-card-timestamp", "Prelims", 2],
