@@ -2,16 +2,21 @@ const API = "https://api.squiggle.com.au/?q=";
 const YEAR = 2026;
 const VENUES = new Map([
   ["GMHBA Stadium", "GMHBA Stadium, 370 Moorabool Street, South Geelong VIC 3220, Australia"],
+  ["Kardinia Park", "GMHBA Stadium, 370 Moorabool Street, South Geelong VIC 3220, Australia"],
   ["M.C.G.", "Melbourne Cricket Ground, Brunton Avenue, Richmond VIC 3002, Australia"],
   ["S.C.G.", "Sydney Cricket Ground, Moore Park Road, Moore Park NSW 2021, Australia"],
   ["MCG", "Melbourne Cricket Ground, Brunton Avenue, Richmond VIC 3002, Australia"],
   ["Marvel Stadium", "Marvel Stadium, 740 Bourke Street, Docklands VIC 3008, Australia"],
+  ["Docklands", "Marvel Stadium, 740 Bourke Street, Docklands VIC 3008, Australia"],
   ["Adelaide Oval", "Adelaide Oval, War Memorial Drive, North Adelaide SA 5006, Australia"],
   ["People First Stadium", "People First Stadium, Nerang Broadbeach Road, Carrara QLD 4211, Australia"],
+  ["Carrara", "People First Stadium, Nerang Broadbeach Road, Carrara QLD 4211, Australia"],
   ["Gabba", "The Gabba, Vulture Street, Woolloongabba QLD 4102, Australia"],
   ["SCG", "Sydney Cricket Ground, Moore Park Road, Moore Park NSW 2021, Australia"],
   ["Sydney Cricket Ground", "Sydney Cricket Ground, Moore Park Road, Moore Park NSW 2021, Australia"],
   ["Optus Stadium", "Optus Stadium, 333 Victoria Park Drive, Burswood WA 6100, Australia"],
+  ["Perth Stadium", "Optus Stadium, 333 Victoria Park Drive, Burswood WA 6100, Australia"],
+  ["Sydney Showground", "GIANTS Stadium, 1 Olympic Boulevard, Sydney Olympic Park NSW 2127, Australia"],
   ["UTAS Stadium", "UTAS Stadium, 27 Invermay Road, Launceston TAS 7248, Australia"],
   ["North Hobart Oval", "North Hobart Oval, 2 Davies Avenue, North Hobart TAS 7000, Australia"],
   ["Heritage Bank Stadium", "Heritage Bank Stadium, Nerang Broadbeach Road, Carrara QLD 4211, Australia"],
@@ -44,7 +49,6 @@ export async function buildAflCatsCalendar() {
   const games = (gamesPayload.games || []).filter((game) => Number(game.hteamid) === geelongId || Number(game.ateamid) === geelongId)
     .filter((game) => game.date && game.hteam && game.ateam)
     .sort((a, b) => matchDate(a) - matchDate(b));
-  console.log("AFL Cats venues", [...new Set(games.map((game) => game.venue))].sort().join(" | "));
   if (games.length < 20) throw new Error(`Squiggle returned only ${games.length} Geelong games; refusing to publish an incomplete calendar.`);
   const entries = games.map((game) => {
     const home = game.hteam;
