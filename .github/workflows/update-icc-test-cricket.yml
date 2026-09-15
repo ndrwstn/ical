@@ -1,6 +1,12 @@
 name: Update ICC Test Cricket calendar
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - "src/icc-test-cricket.mjs"
+      - "scripts/generate-icc-test-cricket.mjs"
+      - ".github/workflows/update-icc-test-cricket.yml"
   workflow_dispatch:
 
 permissions:
