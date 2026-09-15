@@ -1,0 +1,49 @@
+name: Update AFL Cats calendar
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "src/afl-cats.mjs"
+      - "scripts/generate-afl-cats.mjs"
+      - "package.json"
+      - ".github/workflows/update-afl-cats.yml"
+  schedule:
+    - cron: "29 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  generate-and-deploy-afl-cats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Preserve published calendars
+        run: |
+          mkdir -p public
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/ufc.ics -o public/ufc.ics
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/icc-test-cricket.ics -o public/icc-test-cricket.ics
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/aflw-cats.ics -o public/aflw-cats.ics
+      - name: Generate AFL Cats feed
+        run: npm run generate:afl-cats
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
