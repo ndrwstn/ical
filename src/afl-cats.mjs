@@ -44,6 +44,7 @@ export async function buildAflCatsCalendar() {
   const games = (gamesPayload.games || []).filter((game) => Number(game.hteamid) === geelongId || Number(game.ateamid) === geelongId)
     .filter((game) => game.date && game.hteam && game.ateam)
     .sort((a, b) => matchDate(a) - matchDate(b));
+  console.log("AFL Cats venues", [...new Set(games.map((game) => game.venue))].sort().join(" | "));
   if (games.length < 20) throw new Error(`Squiggle returned only ${games.length} Geelong games; refusing to publish an incomplete calendar.`);
   const entries = games.map((game) => {
     const home = game.hteam;
