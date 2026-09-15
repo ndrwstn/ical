@@ -4,4 +4,1108 @@ PRODID:-//ndrwstn//ICC Test Cricket//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:ICC Test Cricket
+BEGIN:VEVENT
+UID:ca-39990-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261009T073000Z
+DTEND:20261009T143000Z
+SUMMARY:South Africa v. Australia — 1st Test — Day 1
+LOCATION:Kingsmead\, Durban
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 1st Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39990-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261010T073000Z
+DTEND:20261010T143000Z
+SUMMARY:South Africa v. Australia — 1st Test — Day 2
+LOCATION:Kingsmead\, Durban
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 1st Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39990-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261011T073000Z
+DTEND:20261011T143000Z
+SUMMARY:South Africa v. Australia — 1st Test — Day 3
+LOCATION:Kingsmead\, Durban
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 1st Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39990-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261012T073000Z
+DTEND:20261012T143000Z
+SUMMARY:South Africa v. Australia — 1st Test — Day 4
+LOCATION:Kingsmead\, Durban
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 1st Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39990-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261013T073000Z
+DTEND:20261013T143000Z
+SUMMARY:South Africa v. Australia — 1st Test — Day 5
+LOCATION:Kingsmead\, Durban
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 1st Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39991-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261018T080000Z
+DTEND:20261018T150000Z
+SUMMARY:South Africa v. Australia — 2nd Test — Day 1
+LOCATION:St George\\u0027s Park\, Gqeberha
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 2nd Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39991-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261019T080000Z
+DTEND:20261019T150000Z
+SUMMARY:South Africa v. Australia — 2nd Test — Day 2
+LOCATION:St George\\u0027s Park\, Gqeberha
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 2nd Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39991-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261020T080000Z
+DTEND:20261020T150000Z
+SUMMARY:South Africa v. Australia — 2nd Test — Day 3
+LOCATION:St George\\u0027s Park\, Gqeberha
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 2nd Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39991-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261021T080000Z
+DTEND:20261021T150000Z
+SUMMARY:South Africa v. Australia — 2nd Test — Day 4
+LOCATION:St George\\u0027s Park\, Gqeberha
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 2nd Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39991-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261022T080000Z
+DTEND:20261022T150000Z
+SUMMARY:South Africa v. Australia — 2nd Test — Day 5
+LOCATION:St George\\u0027s Park\, Gqeberha
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 2nd Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39992-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261027T083000Z
+DTEND:20261027T153000Z
+SUMMARY:South Africa v. Australia — 3rd Test — Day 1
+LOCATION:Newlands Cricket Ground\, Cape Town
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 3rd Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39992-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261028T083000Z
+DTEND:20261028T153000Z
+SUMMARY:South Africa v. Australia — 3rd Test — Day 2
+LOCATION:Newlands Cricket Ground\, Cape Town
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 3rd Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39992-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261029T083000Z
+DTEND:20261029T153000Z
+SUMMARY:South Africa v. Australia — 3rd Test — Day 3
+LOCATION:Newlands Cricket Ground\, Cape Town
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 3rd Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39992-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261030T083000Z
+DTEND:20261030T153000Z
+SUMMARY:South Africa v. Australia — 3rd Test — Day 4
+LOCATION:Newlands Cricket Ground\, Cape Town
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 3rd Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-39992-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261031T083000Z
+DTEND:20261031T153000Z
+SUMMARY:South Africa v. Australia — 3rd Test — Day 5
+LOCATION:Newlands Cricket Ground\, Cape Town
+DESCRIPTION:Series: South Africa v Australia Tests 2026 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+URL:https://www.cricket.com.au/matches/series/CA:4568/south-africa-v-australia-tests-2026-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:South Africa v. Australia — 3rd Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40185-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261209T022000Z
+DTEND:20261209T092000Z
+SUMMARY:Australia v. New Zealand — 1st Test — Day 1
+LOCATION:Perth Stadium\, Perth
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 1st Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40185-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261210T022000Z
+DTEND:20261210T092000Z
+SUMMARY:Australia v. New Zealand — 1st Test — Day 2
+LOCATION:Perth Stadium\, Perth
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 1st Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40185-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261211T022000Z
+DTEND:20261211T092000Z
+SUMMARY:Australia v. New Zealand — 1st Test — Day 3
+LOCATION:Perth Stadium\, Perth
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 1st Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40185-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261212T022000Z
+DTEND:20261212T092000Z
+SUMMARY:Australia v. New Zealand — 1st Test — Day 4
+LOCATION:Perth Stadium\, Perth
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 1st Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40185-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261213T022000Z
+DTEND:20261213T092000Z
+SUMMARY:Australia v. New Zealand — 1st Test — Day 5
+LOCATION:Perth Stadium\, Perth
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 1st Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40186-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261217T003000Z
+DTEND:20261217T073000Z
+SUMMARY:Australia v. New Zealand — 2nd Test — Day 1
+LOCATION:Adelaide Oval\, Adelaide
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 2nd Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40186-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261218T003000Z
+DTEND:20261218T073000Z
+SUMMARY:Australia v. New Zealand — 2nd Test — Day 2
+LOCATION:Adelaide Oval\, Adelaide
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 2nd Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40186-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261219T003000Z
+DTEND:20261219T073000Z
+SUMMARY:Australia v. New Zealand — 2nd Test — Day 3
+LOCATION:Adelaide Oval\, Adelaide
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 2nd Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40186-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261220T003000Z
+DTEND:20261220T073000Z
+SUMMARY:Australia v. New Zealand — 2nd Test — Day 4
+LOCATION:Adelaide Oval\, Adelaide
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 2nd Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40186-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261221T003000Z
+DTEND:20261221T073000Z
+SUMMARY:Australia v. New Zealand — 2nd Test — Day 5
+LOCATION:Adelaide Oval\, Adelaide
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 2nd Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40200-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261225T233000Z
+DTEND:20261226T063000Z
+SUMMARY:Australia v. New Zealand — 3rd Test — Day 1
+LOCATION:MCG\, Melbourne
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 3rd Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40200-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261226T233000Z
+DTEND:20261227T063000Z
+SUMMARY:Australia v. New Zealand — 3rd Test — Day 2
+LOCATION:MCG\, Melbourne
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 3rd Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40200-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261227T233000Z
+DTEND:20261228T063000Z
+SUMMARY:Australia v. New Zealand — 3rd Test — Day 3
+LOCATION:MCG\, Melbourne
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 3rd Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40200-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261228T233000Z
+DTEND:20261229T063000Z
+SUMMARY:Australia v. New Zealand — 3rd Test — Day 4
+LOCATION:MCG\, Melbourne
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 3rd Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40200-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20261229T233000Z
+DTEND:20261230T063000Z
+SUMMARY:Australia v. New Zealand — 3rd Test — Day 5
+LOCATION:MCG\, Melbourne
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 3rd Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40187-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270103T233000Z
+DTEND:20270104T063000Z
+SUMMARY:Australia v. New Zealand — 4th Test — Day 1
+LOCATION:SCG\, Sydney
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 4th Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40187-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270104T233000Z
+DTEND:20270105T063000Z
+SUMMARY:Australia v. New Zealand — 4th Test — Day 2
+LOCATION:SCG\, Sydney
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 4th Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40187-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270105T233000Z
+DTEND:20270106T063000Z
+SUMMARY:Australia v. New Zealand — 4th Test — Day 3
+LOCATION:SCG\, Sydney
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 4th Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40187-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270106T233000Z
+DTEND:20270107T063000Z
+SUMMARY:Australia v. New Zealand — 4th Test — Day 4
+LOCATION:SCG\, Sydney
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 4th Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ca-40187-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270107T233000Z
+DTEND:20270108T063000Z
+SUMMARY:Australia v. New Zealand — 4th Test — Day 5
+LOCATION:SCG\, Sydney
+DESCRIPTION:Series: Australia v New Zealand Tests 2026-27 - Men\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+URL:https://www.cricket.com.au/matches/series/CA:4605/australia-v-new-zealand-tests-2026-27-men
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Australia v. New Zealand — 4th Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Bangladesh-2027-05-28T11%3A00%3A00.000Z-Only%20Rothesay%20Test%20match-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270528T110000Z
+DTEND:20270528T180000Z
+SUMMARY:England v. Bangladesh — Only Rothesay Test — Day 1
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Bangladesh\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Bangladesh — Only Rothesay Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Bangladesh-2027-05-28T11%3A00%3A00.000Z-Only%20Rothesay%20Test%20match-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270529T110000Z
+DTEND:20270529T180000Z
+SUMMARY:England v. Bangladesh — Only Rothesay Test — Day 2
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Bangladesh\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Bangladesh — Only Rothesay Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Bangladesh-2027-05-28T11%3A00%3A00.000Z-Only%20Rothesay%20Test%20match-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270530T110000Z
+DTEND:20270530T180000Z
+SUMMARY:England v. Bangladesh — Only Rothesay Test — Day 3
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Bangladesh\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Bangladesh — Only Rothesay Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Bangladesh-2027-05-28T11%3A00%3A00.000Z-Only%20Rothesay%20Test%20match-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270531T110000Z
+DTEND:20270531T180000Z
+SUMMARY:England v. Bangladesh — Only Rothesay Test — Day 4
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Bangladesh\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Bangladesh — Only Rothesay Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Bangladesh-2027-05-28T11%3A00%3A00.000Z-Only%20Rothesay%20Test%20match-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270601T110000Z
+DTEND:20270601T180000Z
+SUMMARY:England v. Bangladesh — Only Rothesay Test — Day 5
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Bangladesh\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Bangladesh — Only Rothesay Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-18T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270618T110000Z
+DTEND:20270618T180000Z
+SUMMARY:England v. Australia — 1st Rothesay Ashes Test — Day 1
+LOCATION:Trent Bridge\, Nottingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 1st Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-18T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270619T110000Z
+DTEND:20270619T180000Z
+SUMMARY:England v. Australia — 1st Rothesay Ashes Test — Day 2
+LOCATION:Trent Bridge\, Nottingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 1st Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-18T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270620T110000Z
+DTEND:20270620T180000Z
+SUMMARY:England v. Australia — 1st Rothesay Ashes Test — Day 3
+LOCATION:Trent Bridge\, Nottingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 1st Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-18T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270621T110000Z
+DTEND:20270621T180000Z
+SUMMARY:England v. Australia — 1st Rothesay Ashes Test — Day 4
+LOCATION:Trent Bridge\, Nottingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 1st Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-18T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270622T110000Z
+DTEND:20270622T180000Z
+SUMMARY:England v. Australia — 1st Rothesay Ashes Test — Day 5
+LOCATION:Trent Bridge\, Nottingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 1st Rothesay Ashes Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-24T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270624T110000Z
+DTEND:20270624T180000Z
+SUMMARY:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 1
+LOCATION:Headingley\, Leeds
+DESCRIPTION:Series: England Women v Australia – Metro Bank Women’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-24T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270625T110000Z
+DTEND:20270625T180000Z
+SUMMARY:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 2
+LOCATION:Headingley\, Leeds
+DESCRIPTION:Series: England Women v Australia – Metro Bank Women’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-24T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270626T110000Z
+DTEND:20270626T180000Z
+SUMMARY:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 3
+LOCATION:Headingley\, Leeds
+DESCRIPTION:Series: England Women v Australia – Metro Bank Women’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-24T11%3A00%3A00.000Z-1st%20Rothesay%20Ashes%20Test%20match-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270627T110000Z
+DTEND:20270627T180000Z
+SUMMARY:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 4
+LOCATION:Headingley\, Leeds
+DESCRIPTION:Series: England Women v Australia – Metro Bank Women’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:Women’s England v. Australia — 1st Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-30T11%3A00%3A00.000Z-2nd%20Rothesay%20Ashes%20Test-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270630T110000Z
+DTEND:20270630T180000Z
+SUMMARY:England v. Australia — 2nd Rothesay Ashes Test — Day 1
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 2nd Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-30T11%3A00%3A00.000Z-2nd%20Rothesay%20Ashes%20Test-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270701T110000Z
+DTEND:20270701T180000Z
+SUMMARY:England v. Australia — 2nd Rothesay Ashes Test — Day 2
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 2nd Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-30T11%3A00%3A00.000Z-2nd%20Rothesay%20Ashes%20Test-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270702T110000Z
+DTEND:20270702T180000Z
+SUMMARY:England v. Australia — 2nd Rothesay Ashes Test — Day 3
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 2nd Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-30T11%3A00%3A00.000Z-2nd%20Rothesay%20Ashes%20Test-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270703T110000Z
+DTEND:20270703T180000Z
+SUMMARY:England v. Australia — 2nd Rothesay Ashes Test — Day 4
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 2nd Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-06-30T11%3A00%3A00.000Z-2nd%20Rothesay%20Ashes%20Test-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270704T110000Z
+DTEND:20270704T180000Z
+SUMMARY:England v. Australia — 2nd Rothesay Ashes Test — Day 5
+LOCATION:Lord’s\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 2nd Rothesay Ashes Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-08T11%3A00%3A00.000Z-3rd%20Rothesay%20Ashes%20Test-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270708T110000Z
+DTEND:20270708T180000Z
+SUMMARY:England v. Australia — 3rd Rothesay Ashes Test — Day 1
+LOCATION:Edgbaston\, Birmingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 3rd Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-08T11%3A00%3A00.000Z-3rd%20Rothesay%20Ashes%20Test-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270709T110000Z
+DTEND:20270709T180000Z
+SUMMARY:England v. Australia — 3rd Rothesay Ashes Test — Day 2
+LOCATION:Edgbaston\, Birmingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 3rd Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-08T11%3A00%3A00.000Z-3rd%20Rothesay%20Ashes%20Test-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270710T110000Z
+DTEND:20270710T180000Z
+SUMMARY:England v. Australia — 3rd Rothesay Ashes Test — Day 3
+LOCATION:Edgbaston\, Birmingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 3rd Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-08T11%3A00%3A00.000Z-3rd%20Rothesay%20Ashes%20Test-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270711T110000Z
+DTEND:20270711T180000Z
+SUMMARY:England v. Australia — 3rd Rothesay Ashes Test — Day 4
+LOCATION:Edgbaston\, Birmingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 3rd Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-08T11%3A00%3A00.000Z-3rd%20Rothesay%20Ashes%20Test-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270712T110000Z
+DTEND:20270712T180000Z
+SUMMARY:England v. Australia — 3rd Rothesay Ashes Test — Day 5
+LOCATION:Edgbaston\, Birmingham
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 3rd Rothesay Ashes Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-21T11%3A00%3A00.000Z-4th%20Rothesay%20Ashes%20Test-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270721T110000Z
+DTEND:20270721T180000Z
+SUMMARY:England v. Australia — 4th Rothesay Ashes Test — Day 1
+LOCATION:Utilita Bowl\, Southampton
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 4th Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-21T11%3A00%3A00.000Z-4th%20Rothesay%20Ashes%20Test-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270722T110000Z
+DTEND:20270722T180000Z
+SUMMARY:England v. Australia — 4th Rothesay Ashes Test — Day 2
+LOCATION:Utilita Bowl\, Southampton
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 4th Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-21T11%3A00%3A00.000Z-4th%20Rothesay%20Ashes%20Test-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270723T110000Z
+DTEND:20270723T180000Z
+SUMMARY:England v. Australia — 4th Rothesay Ashes Test — Day 3
+LOCATION:Utilita Bowl\, Southampton
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 4th Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-21T11%3A00%3A00.000Z-4th%20Rothesay%20Ashes%20Test-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270724T110000Z
+DTEND:20270724T180000Z
+SUMMARY:England v. Australia — 4th Rothesay Ashes Test — Day 4
+LOCATION:Utilita Bowl\, Southampton
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 4th Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-21T11%3A00%3A00.000Z-4th%20Rothesay%20Ashes%20Test-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270725T110000Z
+DTEND:20270725T180000Z
+SUMMARY:England v. Australia — 4th Rothesay Ashes Test — Day 5
+LOCATION:Utilita Bowl\, Southampton
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 4th Rothesay Ashes Test — Day 5
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-29T11%3A00%3A00.000Z-5th%20Rothesay%20Ashes%20Test-day-1@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270729T110000Z
+DTEND:20270729T180000Z
+SUMMARY:England v. Australia — 5th Rothesay Ashes Test — Day 1
+LOCATION:Kia Oval\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 5th Rothesay Ashes Test — Day 1
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-29T11%3A00%3A00.000Z-5th%20Rothesay%20Ashes%20Test-day-2@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270730T110000Z
+DTEND:20270730T180000Z
+SUMMARY:England v. Australia — 5th Rothesay Ashes Test — Day 2
+LOCATION:Kia Oval\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 5th Rothesay Ashes Test — Day 2
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-29T11%3A00%3A00.000Z-5th%20Rothesay%20Ashes%20Test-day-3@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270731T110000Z
+DTEND:20270731T180000Z
+SUMMARY:England v. Australia — 5th Rothesay Ashes Test — Day 3
+LOCATION:Kia Oval\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 5th Rothesay Ashes Test — Day 3
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-29T11%3A00%3A00.000Z-5th%20Rothesay%20Ashes%20Test-day-4@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270801T110000Z
+DTEND:20270801T180000Z
+SUMMARY:England v. Australia — 5th Rothesay Ashes Test — Day 4
+LOCATION:Kia Oval\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 5th Rothesay Ashes Test — Day 4
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb-England-Australia-2027-07-29T11%3A00%3A00.000Z-5th%20Rothesay%20Ashes%20Test-day-5@ical.ndrwstn.github.io
+DTSTAMP:20260915T015200Z
+DTSTART:20270802T110000Z
+DTEND:20270802T180000Z
+SUMMARY:England v. Australia — 5th Rothesay Ashes Test — Day 5
+LOCATION:Kia Oval\, London
+DESCRIPTION:Series: England Men v Australia – Rothesay Men’s Ashes\nScheduled day estimate\; actual play may change due to weather\, light\, or match conditions.\nTimes use the board's scheduled match start where provided.\nOfficial board source: https://www.ecb.co.uk/news/4539854
+URL:https://www.ecb.co.uk/news/4539854
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:England v. Australia — 5th Rothesay Ashes Test — Day 5
+END:VALARM
+END:VEVENT
 END:VCALENDAR
