@@ -15,9 +15,11 @@ function walk(value, events) {
 }
 function parseEvents(source) {
   const raw = [];
-  for (const match of source.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) { try { walk(JSON.parse(match[1]), raw); } catch {} }
+  // Do not walk generic JSON-LD: UFC's page also embeds unrelated third-party
+  // events there.  Only accept UFC's own event-card markup and UFC event URLs.
   for (const match of source.matchAll(/<h3[^>]*c-card-event--result__headline[^>]*>\s*<a href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>\s*<\/h3>[\s\S]{0,1800}?data-card-event-title=["'][^"']*["']/gi)) {
     const title = stripHtml(match[2]);
+    if (!/^UFC\b/i.test(title)) continue;
     const url = `https://www.ufc.com${match[1]}`;
     const cards = [
       ["data-early-card-timestamp", "Early Prelims", 2],
@@ -33,7 +35,7 @@ function parseEvents(source) {
       raw.push({ url, date: card.date.toISOString(), endDate: scheduledCards[index + 1]?.date?.toISOString(), name: `${title} — ${card.label}`, stage: card.label, durationHours: card.durationHours });
     }
   }
-  for (const match of source.matchAll(/href=["'](\/event\/[^"'#?]+)["'][\s\S]{0,2500}?<time[^>]*datetime=["']([^"']+)["'][^>]*>([\s\S]*?)<\/time>/gi)) raw.push({ url: `https://www.ufc.com${match[1]}`, date: match[2], name: stripHtml(match[3]) });
+  for (const match of source.matchAll(/href=["'](\/event\/ufc-[^"'#?]+)["'][\s\S]{0,2500}?<time[^>]*datetime=["']([^"']+)["'][^>]*>([\s\S]*?)<\/time>/gi)) raw.push({ url: `https://www.ufc.com${match[1]}`, date: match[2], name: stripHtml(match[3]) });
   const now = Date.now() - 86400000;
   return [...new Map(raw.map((event) => { const date = new Date(event.date); const url = event.url.startsWith("http") ? event.url : `https://www.ufc.com${event.url}`; const endDate = event.endDate ? new Date(event.endDate) : null; return [`${event.name}|${date}`, { name: stripHtml(event.name), stage: event.stage || "Main Card", date, endDate: endDate && !Number.isNaN(endDate.getTime()) ? endDate : null, url, durationHours: event.durationHours || 4 }]; })).values()].filter((event) => event.name && !Number.isNaN(event.date.getTime()) && event.date.getTime() > now).sort((a, b) => a.date - b.date);
 }
