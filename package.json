@@ -5,7 +5,8 @@
   "scripts": {
     "generate:ufc": "node scripts/generate.mjs",
     "generate:icc-test-cricket": "node scripts/generate-icc-test-cricket.mjs",
-    "generate:aflw-cats": "node scripts/generate-aflw-cats.mjs"
+    "generate:aflw-cats": "node scripts/generate-aflw-cats.mjs",
+    "generate:afl-cats": "node scripts/generate-afl-cats.mjs"
   },
   "engines": {
     "node": ">=20"
