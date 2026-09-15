@@ -11,7 +11,7 @@ function walk(value, events) {
   const date = value.startDate || value.start_date || value.eventDate || value.event_date;
   const name = value.name || value.title || value.eventName || value.event_name;
   const url = value.url || value.eventUrl || "";
-  if (typeof date === "string" && typeof name === "string" && (/^UFC\\b/i.test(name) || /\\/event\\/ufc-/i.test(url))) events.push({ date, name, url: url || UFC_EVENTS_URL });
+  if (typeof date === "string" && typeof name === "string" && (name.toUpperCase().startsWith("UFC") || url.includes("/event/ufc-"))) events.push({ date, name, url: url || UFC_EVENTS_URL });
   Object.values(value).forEach((item) => walk(item, events));
 }
 function parseEvents(source) {
