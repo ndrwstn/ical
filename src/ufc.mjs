@@ -69,7 +69,8 @@ function fightNotesByStage(source) {
   const blue = stripHtml(source.match(/e-divider__bottom[^>]*>([\s\S]*?)<\/span>/i)?.[1] || "");
   const venue = stripHtml(source.match(/field--name-venue[\s\S]*?field__item">([\s\S]*?)<\/div>/i)?.[1] || "");
   const localTime = stripHtml(source.match(/c-hero__headline-suffix[\s\S]*?>([\s\S]*?)<\/div>/i)?.[1] || "");
-  return { title: red && blue ? `${prefix}: ${red} v. ${blue}` : prefix, venue, localTime, notes: { "Main Card": fightNotes(main), Prelims: fightNotes(prelims), "Early Prelims": fightNotes(earlyPrelims) } };
+  const knownHeadliners = red && blue && !/^\\?+$/.test(red) && !/^\\?+$/.test(blue);
+  return { title: knownHeadliners ? `${prefix}: ${red} v. ${blue}` : prefix, venue, localTime, notes: { "Main Card": fightNotes(main), Prelims: fightNotes(prelims), "Early Prelims": fightNotes(earlyPrelims) } };
 }
 async function fullAddress(venue) {
   if (!venue) return "";
