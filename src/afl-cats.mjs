@@ -37,6 +37,7 @@ function event({ uid, start, end, title, location, description, status = "CONFIR
 export async function buildAflCatsCalendar() {
   const [teamsPayload, gamesPayload] = await Promise.all([get(`teams;year=${YEAR}`), get(`games;year=${YEAR}`)]);
   const teams = new Map((teamsPayload.teams || []).map((team) => [Number(team.id), team.name]));
+  console.log("AFL API sample", JSON.stringify({ teams: (teamsPayload.teams || []).slice(0, 3), game: (gamesPayload.games || [])[0] }));
   const geelongId = [...teams.entries()].find(([, name]) => /^(Geelong|Geelong Cats)$/i.test(name))?.[0];
   if (!geelongId) throw new Error("Geelong was absent from Squiggle's current teams data.");
   const games = (gamesPayload.games || []).filter((game) => Number(game.hteam) === geelongId || Number(game.ateam) === geelongId)
