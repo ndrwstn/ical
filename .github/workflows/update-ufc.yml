@@ -1,6 +1,12 @@
 name: Update UFC calendar
 
 on:
+  push:
+    branches: [master]
+    paths:
+      - "src/ufc.mjs"
+      - "scripts/generate.mjs"
+      - ".github/workflows/update-ufc.yml"
   schedule:
     - cron: "17 */4 * * *"
   workflow_dispatch:
