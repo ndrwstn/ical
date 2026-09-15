@@ -32,6 +32,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Preserve published calendars
+        run: |
+          mkdir -p public
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/icc-test-cricket.ics -o public/icc-test-cricket.ics || true
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/aflw-cats.ics -o public/aflw-cats.ics || true
       - name: Generate UFC feed
         run: npm run generate:ufc
       - name: Upload Pages artifact
