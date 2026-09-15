@@ -30,10 +30,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Preserve the published UFC calendar
+      - name: Preserve published calendars
         run: |
           mkdir -p public
           curl --fail --location --retry 3 https://ndrwstn.github.io/ical/ufc.ics -o public/ufc.ics
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/aflw-cats.ics -o public/aflw-cats.ics || true
       - name: Generate ICC Test Cricket calendar from official boards
         run: npm run generate:icc-test-cricket
       - name: Save the ICC Test Cricket calendar
