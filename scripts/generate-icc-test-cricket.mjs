@@ -1,14 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
-import { buildIccTestCricketCalendar, getCricketDataUsage } from "../src/icc-test-cricket.mjs";
+import { buildIccTestCricketCalendar } from "../src/icc-test-cricket.mjs";
 
 await mkdir("public", { recursive: true });
-try {
-  await writeFile(
-    "public/icc-test-cricket.ics",
-    await buildIccTestCricketCalendar(process.env.CRICKETDATA_API_KEY),
-    "utf8"
-  );
-} finally {
-  const usage = getCricketDataUsage();
-  console.log(`CricketData API calls this run: ${usage.runCalls}/${usage.limit}.`);
-}
+const { calendar, fixtures } = await buildIccTestCricketCalendar();
+await writeFile("public/icc-test-cricket.ics", calendar, "utf8");
+console.log(`ICC Test Cricket calendar: ${fixtures.length} Tests and ${calendar.match(/BEGIN:VEVENT/g)?.length || 0} day-block events.`);
