@@ -7,6 +7,26 @@ const INTERNATIONAL_TEAMS = new Set([
 const CA_HOME = "https://www.cricket.com.au/";
 const ECB_2027 = "https://www.ecb.co.uk/news/4539854";
 
+const VENUE_ADDRESSES = new Map([
+  ["Kingsmead, Durban", "Kingsmead Cricket Ground, 2 Kingsmead Way, Stamford Hill, Durban 4001, South Africa"],
+  ["St George's Park, Gqeberha", "St George's Park Cricket Ground, Park Drive, Gqeberha 6001, South Africa"],
+  ["Newlands Cricket Ground, Cape Town", "Newlands Cricket Ground, 146 Campground Road, Newlands, Cape Town 7780, South Africa"],
+  ["Perth Stadium, Perth", "Perth Stadium, 333 Victoria Park Drive, Burswood WA 6100, Australia"],
+  ["Adelaide Oval, Adelaide", "Adelaide Oval, War Memorial Drive, North Adelaide SA 5006, Australia"],
+  ["MCG, Melbourne", "Melbourne Cricket Ground, Brunton Avenue, Richmond VIC 3002, Australia"],
+  ["SCG, Sydney", "Sydney Cricket Ground, Moore Park Road, Moore Park NSW 2021, Australia"],
+  ["Lord’s, London", "Lord's Cricket Ground, St John's Wood Road, London NW8 8QN, United Kingdom"],
+  ["Trent Bridge, Nottingham", "Trent Bridge Cricket Ground, Bridgford Road, West Bridgford, Nottingham NG2 6AG, United Kingdom"],
+  ["Headingley, Leeds", "Headingley Cricket Ground, St Michael's Lane, Headingley, Leeds LS6 3BR, United Kingdom"],
+  ["Edgbaston, Birmingham", "Edgbaston Stadium, Edgbaston Road, Birmingham B5 7QU, United Kingdom"],
+  ["Utilita Bowl, Southampton", "Utilita Bowl, Botley Road, West End, Southampton SO30 3XH, United Kingdom"],
+  ["Kia Oval, London", "The Kia Oval, Kennington Oval, London SE11 5SS, United Kingdom"],
+]);
+
+function venueAddress(venue = "") {
+  return VENUE_ADDRESSES.get(venue) || venue;
+}
+
 function decodeHtml(value = "") {
   return String(value)
     .replace(/<br\s*\/?>/gi, "\n")
@@ -71,7 +91,7 @@ function caFixtures(fixtures, sourceUrl) {
         series: fixture.competition?.name || "",
         start: fixture.startDateTime,
         days: Number(fixture.numberOfDays) || (fixture.isWomensMatch ? 4 : 5),
-        venue: [fixture.venue?.name, fixture.venue?.location].filter(Boolean).join(", "),
+        venue: venueAddress([fixture.venue?.name, fixture.venue?.location].filter(Boolean).join(", ")),
         sourceUrl,
       };
     })
@@ -114,7 +134,7 @@ function ecbFixtures(html) {
       const testMatch = text.match(/(?:only|\d+(?:st|nd|rd|th))[^:]{0,50}\btest(?:\s+match)?/i);
       if (!testMatch) continue;
       const test = testMatch[0];
-      const venue = text.match(/\btest(?:\s+match)?\s*[–-]\s*([^,]+(?:,\s*[^,]+)?)/i)?.[1]?.replace(/,\s*\d{3,4}\s*$/, "") || "TBD";
+      const venue = venueAddress(text.match(/\btest(?:\s+match)?\s*[–-]\s*([^,]+(?:,\s*[^,]+)?)/i)?.[1]?.replace(/,\s*\d{3,4}\s*$/, "") || "TBD");
       fixtures.push({
         id: `ecb-${encodeURIComponent(`${currentSection.teams.join("-")}-${start}-${test}`)}`,
         teams: currentSection.teams,
