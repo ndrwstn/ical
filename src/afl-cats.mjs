@@ -3,6 +3,7 @@ const YEAR = 2026;
 const VENUES = new Map([
   ["GMHBA Stadium", "GMHBA Stadium, 370 Moorabool Street, South Geelong VIC 3220, Australia"],
   ["M.C.G.", "Melbourne Cricket Ground, Brunton Avenue, Richmond VIC 3002, Australia"],
+  ["S.C.G.", "Sydney Cricket Ground, Moore Park Road, Moore Park NSW 2021, Australia"],
   ["MCG", "Melbourne Cricket Ground, Brunton Avenue, Richmond VIC 3002, Australia"],
   ["Marvel Stadium", "Marvel Stadium, 740 Bourke Street, Docklands VIC 3008, Australia"],
   ["Adelaide Oval", "Adelaide Oval, War Memorial Drive, North Adelaide SA 5006, Australia"],
@@ -27,6 +28,7 @@ async function get(query) {
   if (!response.ok) throw new Error(`${query} returned ${response.status}`);
   return response.json();
 }
+function matchDate(game) { return new Date(`${game.date.replace(" ", "T")}${game.tz || "Z"}`); }
 function roundLabel(game) {
   const finals = { 2: "Elimination Final", 3: "Qualifying Final", 4: "Semi-Final", 5: "Preliminary Final", 6: "Grand Final", 7: "Wildcard Final" };
   return finals[Number(game.is_final)] || `Round ${game.round}`;
@@ -37,22 +39,21 @@ function event({ uid, start, end, title, location, description, status = "CONFIR
 export async function buildAflCatsCalendar() {
   const [teamsPayload, gamesPayload] = await Promise.all([get(`teams;year=${YEAR}`), get(`games;year=${YEAR}`)]);
   const teams = new Map((teamsPayload.teams || []).map((team) => [Number(team.id), team.name]));
-  console.log("AFL API sample", JSON.stringify({ teams: (teamsPayload.teams || []).slice(0, 3), game: (gamesPayload.games || [])[0] }));
   const geelongId = [...teams.entries()].find(([, name]) => /^(Geelong|Geelong Cats)$/i.test(name))?.[0];
   if (!geelongId) throw new Error("Geelong was absent from Squiggle's current teams data.");
-  const games = (gamesPayload.games || []).filter((game) => Number(game.hteam) === geelongId || Number(game.ateam) === geelongId)
-    .filter((game) => game.date && teams.has(Number(game.hteam)) && teams.has(Number(game.ateam)))
-    .sort((a, b) => new Date(a.date) - new Date(b.date));
+  const games = (gamesPayload.games || []).filter((game) => Number(game.hteamid) === geelongId || Number(game.ateamid) === geelongId)
+    .filter((game) => game.date && game.hteam && game.ateam)
+    .sort((a, b) => matchDate(a) - matchDate(b));
   if (games.length < 20) throw new Error(`Squiggle returned only ${games.length} Geelong games; refusing to publish an incomplete calendar.`);
   const entries = games.map((game) => {
-    const home = teams.get(Number(game.hteam));
-    const away = teams.get(Number(game.ateam));
+    const home = game.hteam;
+    const away = game.ateam;
     const title = `AFL: ${home} v. ${away} — ${roundLabel(game)}`;
     const venue = VENUES.get(game.venue) || game.venue || "TBD";
-    const start = new Date(game.date);
+    const start = matchDate(game);
     return event({ uid: `afl-cats-${game.id}`, start, end: new Date(start.getTime() + 3 * 60 * 60 * 1000), title, location: venue, description: [`Fixture: ${home} v. ${away}`, `Venue: ${game.venue || "TBD"}`, `Source: ${API}games;year=${YEAR}`].join("\n") });
   });
-  const geelongFinalLoss = games.some((game) => Number(game.is_final) > 1 && Number(game.complete) === 100 && Number(game.winner) && Number(game.winner) !== geelongId);
+  const geelongFinalLoss = games.some((game) => Number(game.is_final) > 1 && Number(game.complete) === 100 && Number(game.winner) && Number(game.winnerteamid) !== geelongId);
   const grandFinalExists = games.some((game) => Number(game.is_grand_final) === 1);
   if (!geelongFinalLoss && !grandFinalExists) {
     const placeholderStart = new Date(Date.UTC(YEAR, 8, 26, 4, 30));
