@@ -38,6 +38,7 @@ jobs:
           mkdir -p public
           curl --fail --location --retry 3 https://ndrwstn.github.io/ical/ufc.ics -o public/ufc.ics
           curl --fail --location --retry 3 https://ndrwstn.github.io/ical/icc-test-cricket.ics -o public/icc-test-cricket.ics
+          curl --fail --location --retry 3 https://ndrwstn.github.io/ical/afl-cats.ics -o public/afl-cats.ics || true
       - name: Generate AFLW Cats feed
         run: npm run generate:aflw-cats
       - name: Upload Pages artifact
