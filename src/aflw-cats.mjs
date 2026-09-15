@@ -16,7 +16,7 @@ function decodeHtml(value = "") {
 }
 async function fetchHtml(url) {
   const response = await fetch(url, { headers: { "user-agent": "ndrwstn-ical/1.0 (+https://github.com/ndrwstn/ical)" } });
-  if (!response.ok) throw new Error(`\${url} returned \${response.status}`);
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
   return response.text();
 }
 function utcFromZoned(year, month, day, hour, minute, timeZone) {
@@ -34,7 +34,7 @@ function parseFixtures(html) {
   const text = decodeHtml(html);
   const table = text.match(/Geelong's 2026 AFLW Fixture([\s\S]*?)(?:Today's Must Read|$)/i)?.[1] || "";
   const months = "January|February|March|April|May|June|July|August|September|October|November|December";
-  const row = new RegExp(`(\\d+)\\s*\\|?\\s*(Geelong(?: Cats)?|North Melbourne|Gold Coast|Adelaide|Collingwood|Richmond|West Coast|GWS Giants)\\s+v\\.?(?:\\s+)(Geelong(?: Cats)?|North Melbourne|Gold Coast|Adelaide|Collingwood|Richmond|West Coast|GWS Giants)\\s*\\|?\\s*([^|]+?)\\s*\\|?\\s*(?:[A-Za-z]+\\s+)?(\\d{1,2})\\s+(\${months}),?\\s*(\\d{1,2})\\.(\\d{2})(am|pm)`, "gi");
+  const row = new RegExp(`(\\d+)\\s*\\|?\\s*(Geelong(?: Cats)?|North Melbourne|St Kilda|Gold Coast|Essendon|Adelaide|Collingwood|Hawthorn|Richmond|GWS Giants|West Coast|Fremantle|Western Bulldogs)\\s+v\\.?(?:\\s+)(Geelong(?: Cats)?|North Melbourne|St Kilda|Gold Coast|Essendon|Adelaide|Collingwood|Hawthorn|Richmond|GWS Giants|West Coast|Fremantle|Western Bulldogs)\\s*\\|?\\s*([^|]+?)\\s*\\|?\\s*(?:[A-Za-z]+\\s+)?(\\d{1,2})\\s+(${months}),?\\s*(\\d{1,2})\\.(\\d{2})(am|pm)`, "gi");
   const fixtures = [];
   for (const match of table.matchAll(row)) {
     const [, round, home, away, venueRaw, day, monthName, hourText, minuteText, meridiem] = match;
@@ -44,7 +44,7 @@ function parseFixtures(html) {
     let hour = Number(hourText);
     if (meridiem.toLowerCase() === "pm" && hour !== 12) hour += 12;
     if (meridiem.toLowerCase() === "am" && hour === 12) hour = 0;
-    const month = new Date(`\${monthName} 1, 2026`).getUTCMonth() + 1;
+    const month = new Date(`${monthName} 1, 2026`).getUTCMonth() + 1;
     fixtures.push({ round: Number(round), home: home.replace(/ Cats$/, ""), away: away.replace(/ Cats$/, ""), venue, ...meta, start: utcFromZoned(2026, month, Number(day), hour, Number(minuteText), meta.zone) });
   }
   return fixtures;
@@ -52,15 +52,15 @@ function parseFixtures(html) {
 function esc(value = "") { return String(value).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n"); }
 function stamp(date) { return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
 function event({ uid, start, end, title, location, description, status = "CONFIRMED" }) {
-  return ["BEGIN:VEVENT", `UID:\${uid}@ical.ndrwstn.github.io`, `DTSTAMP:\${stamp(new Date())}`, `DTSTART:\${stamp(start)}`, `DTEND:\${stamp(end)}`, `SUMMARY:\${esc(title)}`, `LOCATION:\${esc(location)}`, `DESCRIPTION:\${esc(description)}`, `URL:\${FIXTURE_URL}`, `STATUS:\${status}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:\${esc(title)}`, "END:VALARM", "END:VEVENT"].join("\r\n");
+  return ["BEGIN:VEVENT", `UID:${uid}@ical.ndrwstn.github.io`, `DTSTAMP:${stamp(new Date())}`, `DTSTART:${stamp(start)}`, `DTEND:${stamp(end)}`, `SUMMARY:${esc(title)}`, `LOCATION:${esc(location)}`, `DESCRIPTION:${esc(description)}`, `URL:${FIXTURE_URL}`, `STATUS:${status}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:${esc(title)}`, "END:VALARM", "END:VEVENT"].join("\r\n");
 }
 export async function buildAflwCatsCalendar() {
   const fixtures = parseFixtures(await fetchHtml(FIXTURE_URL));
-  if (fixtures.length < 10) throw new Error(`Official Geelong AFLW fixture yielded only \${fixtures.length} matches; refusing to publish an incomplete calendar.`);
+  if (fixtures.length < 10) throw new Error(`Official Geelong AFLW fixture yielded only ${fixtures.length} matches; refusing to publish an incomplete calendar.`);
   const entries = fixtures.map((fixture) => event({
-    uid: `aflw-cats-2026-r\${fixture.round}`, start: fixture.start, end: new Date(fixture.start.getTime() + 3 * 60 * 60 * 1000),
-    title: `AFLW: \${fixture.home} v. \${fixture.away} — Round \${fixture.round}`, location: fixture.address,
-    description: [`Official fixture: \${fixture.home} v. \${fixture.away}`, `Venue: \${fixture.venue}`, `Local time zone: \${fixture.zone}`, `Source: \${FIXTURE_URL}`].join("\n"),
+    uid: `aflw-cats-2026-r${fixture.round}`, start: fixture.start, end: new Date(fixture.start.getTime() + 3 * 60 * 60 * 1000),
+    title: `AFLW: ${fixture.home} v. ${fixture.away} — Round ${fixture.round}`, location: fixture.address,
+    description: [`Official fixture: ${fixture.home} v. ${fixture.away}`, `Venue: ${fixture.venue}`, `Local time zone: ${fixture.zone}`, `Source: ${FIXTURE_URL}`].join("\n"),
   }));
   const finalsStart = utcFromZoned(2026, 11, 7, 12, 0, "Australia/Melbourne");
   entries.push(event({ uid: "aflw-cats-2026-finals-tba", start: finalsStart, end: new Date(finalsStart.getTime() + 60 * 60 * 1000), title: "AFLW Geelong Finals — TBA", location: "TBA", description: "Placeholder only. It will be replaced by an actual Geelong finals fixture if the official club source publishes one.", status: "TENTATIVE" }));
