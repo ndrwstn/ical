@@ -58,7 +58,7 @@ export async function buildAflCatsCalendar() {
     const start = matchDate(game);
     return event({ uid: `afl-cats-${game.id}`, start, end: new Date(start.getTime() + 3 * 60 * 60 * 1000), title, location: venue, description: [`Fixture: ${home} v. ${away}`, `Venue: ${game.venue || "TBD"}`, `Source: ${API}games;year=${YEAR}`].join("\n") });
   });
-  const geelongFinalLoss = games.some((game) => Number(game.is_final) > 1 && Number(game.complete) === 100 && Number(game.winner) && Number(game.winnerteamid) !== geelongId);
+  const geelongFinalLoss = games.some((game) => Number(game.is_final) > 1 && Number(game.complete) === 100 && Number(game.winnerteamid) && Number(game.winnerteamid) !== geelongId);
   const grandFinalExists = games.some((game) => Number(game.is_grand_final) === 1);
   if (!geelongFinalLoss && !grandFinalExists) {
     const placeholderStart = new Date(Date.UTC(YEAR, 8, 26, 4, 30));
