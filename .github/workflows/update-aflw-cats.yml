@@ -1,4 +1,5 @@
 name: Update AFLW Cats calendar
+# Source changes deploy the current master feed.
 
 on:
   push:
