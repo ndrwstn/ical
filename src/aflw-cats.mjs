@@ -63,6 +63,6 @@ export async function buildAflwCatsCalendar() {
     description: [`Official fixture: ${fixture.home} v. ${fixture.away}`, `Venue: ${fixture.venue}`, `Local time zone: ${fixture.zone}`, `Source: ${FIXTURE_URL}`].join("\n"),
   }));
   const finalsStart = utcFromZoned(2026, 11, 7, 12, 0, "Australia/Melbourne");
-  entries.push(event({ uid: "aflw-cats-2026-finals-tba", start: finalsStart, end: new Date(finalsStart.getTime() + 60 * 60 * 1000), title: "AFLW Geelong Finals — TBA", location: "TBA", description: "Placeholder only; it is not a confirmed match.", status: "TENTATIVE" }));
+  entries.push(event({ uid: "aflw-cats-2026-finals-tba", start: finalsStart, end: new Date(finalsStart.getTime() + 60 * 60 * 1000), title: "AFLW Grand Final — TBA", location: "TBA", description: "Placeholder only; it is not a confirmed match.", status: "TENTATIVE" }));
   return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ndrwstn//AFLW Cats//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:AFLW Cats", ...entries, "END:VCALENDAR", ""].join("\r\n");
 }
