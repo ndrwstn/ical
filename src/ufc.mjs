@@ -7,7 +7,7 @@ function ics(value = "") { return String(value).replace(/\\/g, "\\\\").replace(/
 function utc(value) { return value.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
 function officialEventUrl(value) {
   for (const candidate of [value.url, value.eventUrl, value["@id"], value.id]) {
-    if (typeof candidate === "string" && /(?:^|\\/)event\\/ufc-/i.test(candidate)) return candidate;
+    if (typeof candidate === "string" && candidate.toLowerCase().includes("/event/ufc-")) return candidate;
   }
   return "";
 }
