@@ -5,13 +5,25 @@ function stripHtml(value = "") {
 }
 function ics(value = "") { return String(value).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n"); }
 function utc(value) { return value.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+function officialEventUrl(value) {
+  for (const candidate of [value.url, value.eventUrl, value["@id"], value.id]) {
+    if (typeof candidate === "string" && /(?:^|\\/)event\\/ufc-/i.test(candidate)) return candidate;
+  }
+  return "";
+}
+function cleanEventName(value = "") {
+  const name = stripHtml(value);
+  // UFC sometimes prefixes numbered cards with a venue sponsor (for example,
+  // "Crypto.com UFC 331"). Keep the official UFC designation, not the sponsor.
+  return name.match(/\\bUFC\\s+\\d+\\b[\\s\\S]*/i)?.[0] || name;
+}
 function walk(value, events) {
   if (Array.isArray(value)) return value.forEach((item) => walk(item, events));
   if (!value || typeof value !== "object") return;
   const date = value.startDate || value.start_date || value.eventDate || value.event_date;
   const name = value.name || value.title || value.eventName || value.event_name;
-  const url = value.url || value.eventUrl || "";
-  if (typeof date === "string" && typeof name === "string" && (name.toUpperCase().startsWith("UFC") || url.includes("/event/ufc-"))) events.push({ date, name, url: url || UFC_EVENTS_URL });
+  const url = officialEventUrl(value);
+  if (typeof date === "string" && typeof name === "string" && (name.toUpperCase().startsWith("UFC") || url)) events.push({ date, name: cleanEventName(name), url: url || UFC_EVENTS_URL });
   Object.values(value).forEach((item) => walk(item, events));
 }
 function parseEvents(source) {
@@ -39,7 +51,7 @@ function parseEvents(source) {
   }
   for (const match of source.matchAll(/href=["'](\/event\/ufc-[^"'#?]+)["'][\s\S]{0,2500}?<time[^>]*datetime=["']([^"']+)["'][^>]*>([\s\S]*?)<\/time>/gi)) raw.push({ url: `https://www.ufc.com${match[1]}`, date: match[2], name: stripHtml(match[3]) });
   const now = Date.now() - 86400000;
-  return [...new Map(raw.map((event) => { const date = new Date(event.date); const url = event.url.startsWith("http") ? event.url : `https://www.ufc.com${event.url}`; const endDate = event.endDate ? new Date(event.endDate) : null; return [`${event.name}|${date}`, { name: stripHtml(event.name), stage: event.stage || "Main Card", date, endDate: endDate && !Number.isNaN(endDate.getTime()) ? endDate : null, url, durationHours: event.durationHours || 4 }]; })).values()].filter((event) => event.name && !Number.isNaN(event.date.getTime()) && event.date.getTime() > now).sort((a, b) => a.date - b.date);
+  return [...new Map(raw.map((event) => { const date = new Date(event.date); const url = event.url.startsWith("http") ? event.url : `https://www.ufc.com${event.url}`; const endDate = event.endDate ? new Date(event.endDate) : null; return [`${event.name}|${date}`, { name: cleanEventName(event.name), stage: event.stage || "Main Card", date, endDate: endDate && !Number.isNaN(endDate.getTime()) ? endDate : null, url, durationHours: event.durationHours || 4 }]; })).values()].filter((event) => event.name && !Number.isNaN(event.date.getTime()) && event.date.getTime() > now).sort((a, b) => a.date - b.date);
 }
 function division(code) {
   const value = stripHtml(code).replace(/\s*Bout\s*/i, "").replace(/Women['’]s\s*/i, "").trim().toLowerCase();
