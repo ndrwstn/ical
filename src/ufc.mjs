@@ -72,8 +72,9 @@ function fightNotes(source) {
 }
 function fightNotesByStage(source) {
   const mainStart = source.indexOf('class="fight-card"');
-  const prelimStart = source.indexOf('id="prelims-card--');
-  const earlyStart = source.indexOf('id="early-prelims--');
+  // UFC's markup has used both suffixed and plain section IDs.
+  const prelimStart = source.search(/id=["']prelims-card(?:--[^"']*)?["']/i);
+  const earlyStart = source.search(/id=["']early-prelims(?:--[^"']*)?["']/i);
   const main = source.slice(mainStart >= 0 ? mainStart : 0, prelimStart >= 0 ? prelimStart : source.length);
   const prelims = prelimStart >= 0 ? source.slice(prelimStart, earlyStart >= 0 ? earlyStart : source.length) : "";
   const earlyPrelims = earlyStart >= 0 ? source.slice(earlyStart) : "";
