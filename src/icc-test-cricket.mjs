@@ -27,7 +27,7 @@ function decodeUnicodeEscapes(value = "") {
   // Some board fixture payloads double-escape Unicode (for example, \\u2019).
   // Decode it before using venue names as map keys or calendar text.
   return String(value)
-    .replace(/\\\\+u\\{([0-9a-f]{1,6})\\}/gi, (_, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
+    .replace(/\\+u\{([0-9a-f]{1,6})\}/gi, (_, hex) => String.fromCodePoint(Number.parseInt(hex, 16)))
     .replace(/\\+u([0-9a-f]{4})/gi, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))
     .replace(/\\+x([0-9a-f]{2})/gi, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)));
 }
